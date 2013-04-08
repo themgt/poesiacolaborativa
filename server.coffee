@@ -94,7 +94,8 @@ app.get '/acerca', (req,res) ->
   res.render 'acerca', { slug: "acerca" }
 
 # Puerto de escucha del servidor
-server = app.listen 18118
+port = process.env.PORT || 18118
+server = app.listen port
 
 # socket.io
 io = require('socket.io').listen server
@@ -113,4 +114,4 @@ io.sockets.on 'connection', (socket) ->
     socket.broadcast.emit 'mover', {data: palabras[d.data.id], id: d.data.id}   
 
 # Envío de mensaje a la consola o terminal
-console.log "Servidor escuchando en el puerto 18118"
+console.log "Servidor escuchando en el puerto #{port}"

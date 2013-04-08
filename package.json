@@ -1,5 +1,5 @@
 {
-  "name": "Poesía colaborativa",
+  "name": "Poesíacolaborativa",
   "slug": "poesia-colaborativa",
   "author": "Alvaro Saco <hola@alvarosaco.es>",
   "version": "0.0.1",
@@ -9,8 +9,13 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "3.0.0alpha1",
+    "coffee-script": "1.6",
+    "express": "3",
     "jade": "*",
     "socket.io": "*"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm":  ">= 1.1.0"
   }
 }

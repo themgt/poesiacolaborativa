@@ -1,3 +1,3 @@
 module.exports = () ->
   class Palabra
-    constructor: (@texto, @x, @y)
+    constructor: (@texto, @x, @y) ->
